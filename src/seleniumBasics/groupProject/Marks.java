@@ -1,16 +1,5 @@
 package seleniumBasics.groupProject;
-
-public class part2 {
-    /*//Task2
-    We have to calculate the average of marks obtained in three subjects by student A and by student B.
-    Create   class   'Marks'   with an abstract method 'getPercentage' that will be returning the
-    average percentage   of   marks.   Provide an implementation of abstract method in classes
-    'A'   and   'B'.  The constructor of student A takes the marks in three subjects as its parameters
-    and the marks in four subjects as its parameters for student B.
-    Test your code
-     */
-
-    abstract class Marks {
+        abstract class Marks {
         //Marks constructor with 3 subjects
         public Marks(double mathMark, double scienceMark, double physicsMark) {
             this.mathMark = mathMark;
@@ -25,7 +14,7 @@ public class part2 {
         //abstract method
         abstract double getPercentage();
     }
-     static class A extends Marks {
+    class A extends Marks {
 
         //constructor for A student
         public A(double mathMark, double scienceMark, double physicsMark) {
@@ -54,11 +43,11 @@ public class part2 {
             return averageMark;
         }
     }
-    static class Tester {
+    class Tester {
         public static void main(String[] args) {
 
             A a=new A(2.4,5.5,6.7);
             System.out.println(a.getPercentage());
         }
     }
-}
+
